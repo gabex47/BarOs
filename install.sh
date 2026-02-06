@@ -4,7 +4,7 @@ set -e
 
 APP_NAME="UtilDraw"
 TMP_DIR="/tmp/$APP_NAME"
-ZIP_URL="https://github.com/gabex47/UtilDraw/releases/download/V1.0/UtilDraw.zip"
+ZIP_URL="https://github.com/gabex47/UtilDraw/releases/latest/download/UtilDraw.zip"
 
 echo "Installing $APP_NAME..."
 echo "Downloading..."
