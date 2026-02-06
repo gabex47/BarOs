@@ -18,7 +18,7 @@ echo "Unzipping..."
 unzip -q "$TMP_DIR/$APP_NAME.zip" -d "$TMP_DIR"
 
 echo "Installing to /Applications..."
-cp -R "$TMP_DIR/UtilDraw/UtilDraw.app"  /Applications/
+cp -R "$TMP_DIR/UtilDraw.app"  /Applications/
 
 echo "Cleaning..."
 rm -rf "$TMP_DIR"
