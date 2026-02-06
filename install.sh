@@ -1,0 +1,27 @@
+#!/bin/bash
+
+set -e
+
+APP_NAME="UtilDraw"
+TMP_DIR="/tmp/$APP_NAME"
+ZIP_URL="https://github.com/gabex47/UtilDraw/releases/download/V1.0/UtilDraw.zip"
+
+echo "Installing $APP_NAME..."
+echo "Downloading..."
+
+rm -rf "$TMP_DIR"
+mkdir -p "$TMP_DIR"
+
+curl -L "$ZIP_URL" -o "$TMP_DIR/$APP_NAME.zip"
+
+echo "Unzipping..."
+unzip -q "$TMP_DIR/$APP_NAME.zip" -d "$TMP_DIR"
+
+echo "Installing to /Applications..."
+cp -R "$TMP_DIR/$APP_NAME.app" /Applications/
+
+echo "Cleaning..."
+rm -rf "$TMP_DIR"
+
+echo "Done! Launching $APP_NAME 🚀"
+open "/Applications/$APP_NAME.app"
